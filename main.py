@@ -35,7 +35,7 @@ def get_pixel_area(res, coords, bounds, R):
     lat_index = int(round((lat - bounds["bottom"]) / abs(res[1]), 0))
     area = areas[lat_index]
     if R == 6371:
-        print(f"{area} km squared!")
+        print(f"{area} km squared at {coords}")
     return area
     
 if __name__ == "__main__":
@@ -48,5 +48,6 @@ if __name__ == "__main__":
               }
     
     # KNEPP
-    coords = (50.978141, -0.358317)
+    # coords = (50.978141, -0.358317)
+    coords = (10.720675, -85.013805)
     get_pixel_area(res, coords, bounds, R)
