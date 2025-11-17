@@ -16,8 +16,9 @@ def get_areas(
             "left" : -180,
             "right" : 180
             },
-        R: float = 6371.0,
+        R: float = 6371.0, # earth radius in km
         ) -> np.array:
+    
     R * np.sin(np.deg2rad(res[0]))
     latitudes = np.linspace(bounds["bottom"],
                             bounds["top"], 
